@@ -1,3 +1,5 @@
+import { OrbitListComponent } from "./orbit-list/orbit-list.component";
+
 export class Satellite {
     name: string;
     orbitType: string;
@@ -15,13 +17,12 @@ export class Satellite {
     }
     shouldShowWarning(){
         if(this.type.toLowerCase() === "space debris"){
-            let warningColor = true
-            return warningColor
+            return true
         }
         else{
-            let warningColor = false
-            return warningColor
+            return false
         }
     }
 
 }
+

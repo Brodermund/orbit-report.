@@ -8,10 +8,12 @@ import { Satellite, } from '../satellite';
 
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
+ 
   constructor() { }
 
   ngOnInit() {
   }
+  
   sort(column: string): void {
     // console.log(this.satellites.sat)
 // array.sort modifies the array, sorting the items based on the given compare function
@@ -23,5 +25,6 @@ export class OrbitListComponent implements OnInit {
       }
       return 0;
    });
+
   }
 }
